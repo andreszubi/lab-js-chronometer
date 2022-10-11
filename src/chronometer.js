@@ -13,8 +13,8 @@ this.intervalId = setInterval(() => {
  }, 1000);
 }
   getMinutes() {
-    const minutes = this.currentTime / 60;
-    return Math.floor(minutes);
+    const minutes = this.currentTime * 100;
+    return Math.floor(minutes / 60);
   }
 
   getSeconds() {
@@ -47,6 +47,5 @@ this.intervalId = setInterval(() => {
    let minutes = this.computeTwoDigitNumber(this.getMinutes());
    let seconds = this.computeTwoDigitNumber(this.getSeconds());
    return `${minutes}:${seconds}`;
-  
   }
 }
